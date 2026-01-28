@@ -74,6 +74,9 @@ body {
       color: whitesmoke;
       width: 200px;
 }
+button a{
+  color: whitesmoke;
+}
 @keyframes jump {
     0%, 100% {
         transform: translateY(0);
@@ -619,3 +622,4 @@ hr {
     opacity: 1;
   }
 }
+
