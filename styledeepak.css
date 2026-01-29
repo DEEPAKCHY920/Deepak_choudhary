@@ -1,9 +1,15 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -39,15 +45,17 @@ body {
     color: #444;
     font-weight: 600;
 }
+
+
 .hero p{
-    font-size: 32px;
+    font-size: clamp(16px, 4vw, 32px);
 }
 .hero span {
   color: #7B5CF6;
-  font-size: 100px;
+ font-size: clamp(40px, 9vw, 100px);
 }
 .hero h1 {
-  font-size: 48px;
+ font-size: clamp(26px, 6vw, 48px);
 }
 .hero {
   height: 90vh;
@@ -125,8 +133,27 @@ button a{
 /* about */
 .about {
   padding: 60px 8%;
-  margin-left: 80PX;
+
+  margin-left: 0;
 }
+
+@media (max-width: 768px) {
+  .about-image {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 40px 15px;
+  }
+
+  .contact-card,
+  .info-card {
+    padding: 20px;
+  }
+}
+
 .about-header {
 
   text-align: center;
@@ -633,4 +660,20 @@ hr {
   }
 }
 
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+  }
 
+  .navbar nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar a {
+    margin: 8px 12px;
+    font-size: 16px;
+  }
+}
