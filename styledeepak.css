@@ -677,3 +677,47 @@ hr {
     font-size: 16px;
   }
 }
+.about-image {
+  position: relative;
+  width: 320px;            /* adjust if needed */
+  padding: 4px;            /* border thickness */
+  border-radius: 20px;
+}
+
+/* RGB BORDER */
+.about-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(
+    45deg,
+    red,
+    orange,
+    yellow,
+    lime,
+    cyan,
+    blue,
+    magenta,
+    red
+  );
+  background-size: 400%;
+  animation: rgbBorder 6s linear infinite;
+  z-index: -1;
+}
+
+/* IMAGE */
+.about-image img {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+  background: #fff;
+}
+
+/* ANIMATION */
+@keyframes rgbBorder {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
